@@ -15,13 +15,13 @@ export default {
   "home.title": "پلتفرم اشتراک‌گذاری فایل <h>میزبانی شخصی</h>.",
   "home.description": "آیا واقعاً می‌خواهید فایل‌های شخصی خود را به شخص ثالثی مانند WeTransfer بسپارید؟",
   "home.bullet.a.name": "میزبانی شخصی",
-  "home.bullet.a.description": "Pingvin Share را روی دستگاه خود میزبانی کنید.",
+  "home.bullet.a.description": "  روی دستگاه خود میزبانی کنید.",
   "home.bullet.b.name": "حریم خصوصی",
   "home.bullet.b.description": "فایل‌های شما متعلق به شماست و هرگز توسط اشخاص ثالث قابل دسترسی نخواهد بود.",
   "home.bullet.c.name": "بدون محدودیت حجم",
   "home.bullet.c.description": "فایل‌هایی با هر حجمی بارگذاری کنید. تنها محدودیت، هارد دیسک شماست.",
   "home.button.start": "شروع کنید",
-  "home.button.source": "کد منبع",
+  "home.button.source": "کد ",
   
   // Auth
   "signin.title": "خوش آمدید",
