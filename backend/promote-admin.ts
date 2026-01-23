@@ -4,7 +4,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // REPLACE THIS WITH YOUR EMAIL
-const TARGET_EMAIL = 'crissx08@gmail.com'; 
+const TARGET_EMAIL = 'shayansharifi@gmail.com'; 
 
 async function main() {
   console.log(`🔍 Searching for user: ${TARGET_EMAIL}...`);
