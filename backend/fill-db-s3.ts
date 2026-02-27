@@ -14,7 +14,7 @@ const s3Configs = [
 ];
 
 async function main() {
-  console.log('🌱 Adding S3 settings to database...');
+  console.log(' Adding S3 settings to database...');
 
   for (const config of s3Configs) {
     await prisma.config.upsert({
@@ -35,10 +35,10 @@ async function main() {
         order: config.order,
       },
     });
-    console.log(`✅ Ensure ${config.category}.${config.name} exists.`);
+    console.log(` Ensure ${config.category}.${config.name} exists.`);
   }
 
-  console.log('🎉 S3 settings added successfully!');
+  console.log(' S3 settings added successfully!');
 }
 
 main()

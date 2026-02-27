@@ -1,0 +1,172 @@
+# This configuration is pre-filled with the default values.
+
+general:
+  # Name of the application
+  appName: Pingvin Share
+  # On which URL Pingvin Share is available
+  appUrl: http://localhost:8080
+  # Whether to set the secure flag on cookies.
+  secureCookies: false
+  # Whether to show the home page
+  showHomePage: true
+  # Time after which a user must log in again (default: 3 months).
+  sessionDuration: 3 months
+
+share:
+  # Whether registration is allowed
+  allowRegistration: true
+  # Whether unauthenticated users can create shares
+  allowUnauthenticatedShares: false
+  # Maximum share expiration. Set to 0 to allow unlimited expiration.
+  maxExpiration: 0 days
+  # Default length for the generated ID of a share.
+  shareIdLength: 8
+  # Maximum share size (in bytes)
+  maxSize: 1000000000
+  # Compression level (0-9)
+  zipCompressionLevel: 9
+  # Chunk size for uploads
+  chunkSize: 10000000
+  # Auto open modal
+  autoOpenShareModal: false
+
+cache:
+  # FIX: Added both formats to ensure the code finds it regardless of version
+  redis-enabled: false
+  redis:
+    enabled: false
+    url: redis://pingvin-redis:6379
+  
+  # Url to connect to the Redis instance used for caching.
+  redis-url: redis://pingvin-redis:6379
+  # Time in second to keep information inside the cache.
+  ttl: 60
+  # Maximum number of items inside the cache.
+  maxItems: 1000
+
+email:
+  # Whether to allow email sharing with recipients.
+  enableShareEmailRecipients: false
+  # Subject of the email which gets sent to the share recipients.
+  shareRecipientsSubject: Files shared with you
+  shareRecipientsMessage: >-
+    Hey!
+
+    {creator} ({creatorEmail}) shared some files with you. You can view or download the
+    files with this link: {shareUrl}
+
+    The share will expire {expires}.
+
+    Note: {desc}
+
+    Shared securely with Pingvin Share 🐧
+  
+  reverseShareSubject: Reverse share link used
+  reverseShareMessage: |-
+    Hey!
+
+    A share was just created with your reverse share link: {shareUrl}
+
+    Shared securely with Pingvin Share 🐧
+  
+  resetPasswordSubject: Pingvin Share password reset
+  resetPasswordMessage: >-
+    Hey!
+
+    You requested a password reset. Click this link to reset your password:
+    {url}
+
+    The link expires in an hour.
+
+    Pingvin Share 🐧
+  
+  inviteSubject: Pingvin Share invite
+  inviteMessage: >-
+    Hey!
+
+    You were invited to Pingvin Share. Click this link to accept the invite:
+    {url}
+
+    You can use the email "{email}" and the password "{password}" to sign in.
+
+    Pingvin Share 🐧
+
+smtp:
+  enabled: false
+  allowUnauthorizedCertificates: false
+  host: ""
+  port: 0
+  email: ""
+  username: ""
+  password: ""
+
+ldap:
+  enabled: false
+  url: ""
+  bindDn: ""
+  bindPassword: ""
+  searchBase: ""
+  searchQuery: ""
+  adminGroups: ""
+  fieldNameMemberOf: memberOf
+  fieldNameEmail: userPrincipalName
+
+oauth:
+  allowRegistration: true
+  ignoreTotp: true
+  disablePassword: false
+  
+  github-enabled: false
+  github-clientId: ""
+  github-clientSecret: ""
+  
+  google-enabled: false
+  google-clientId: ""
+  google-clientSecret: ""
+  
+  microsoft-enabled: false
+  microsoft-tenant: common
+  microsoft-clientId: ""
+  microsoft-clientSecret: ""
+  
+  discord-enabled: false
+  discord-limitedGuild: ""
+  discord-limitedUsers: ""
+  discord-clientId: ""
+  discord-clientSecret: ""
+  
+  oidc-enabled: false
+  oidc-discoveryUri: ""
+  oidc-signOut: false
+  oidc-scope: openid email profile
+  oidc-usernameClaim: ""
+  oidc-rolePath: ""
+  oidc-roleGeneralAccess: ""
+  oidc-roleAdminAccess: ""
+  oidc-clientId: ""
+  oidc-clientSecret: ""
+
+s3:
+  enabled: false
+  endpoint: ""
+  region: ""
+  bucketName: ""
+  bucketPath: ""
+  key: ""
+  secret: ""
+  useChecksum: true
+
+legal:
+  enabled: false
+  imprintText: ""
+  imprintUrl: ""
+  privacyPolicyText: ""
+  privacyPolicyUrl: ""
+
+initUser:
+  enabled: false
+  username: admin
+  email: admin@example.com
+  password: my-secure-password
+  isAdmin: true
+  ldapDN: ""

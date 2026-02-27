@@ -12,7 +12,7 @@ const OVERRIDES: Record<string, string | number | boolean> = {
   "share.maxSize": 100000000000,    // 100 GB (in bytes)
   "share.chunkSize": 100000000,     // 100 MB
   "general.appName": "WeTransfer",
-  "general.showHomePage": true,
+  "general.showHomePage": false,    // <--- CHANGED TO FALSE (Hides Home Button)
   "share.shareIdLength": 8,
 };
 
